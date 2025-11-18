@@ -24,6 +24,12 @@ class DatabaseSeeder extends Seeder
             ['name' => 'Finance'],
             ['name' => 'Marketing'],
         ]);
+        $akses = Role::semua_akses();
+        $updateData = [];
+        foreach ($akses as $a) {
+            $updateData[$a['id']] = 1;
+        }
+        Role::whereIn('id',[1])->update($updateData);
 
         User::insert([
             ['name' => 'Andik Kurniawan', 'username' => 'andik', 'password' => bcrypt('Qc_789456'), 'role_id' => 1],
