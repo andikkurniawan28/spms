@@ -16,9 +16,9 @@ return new class extends Migration
             $table->foreignId('client_id')->constrained();
             $table->string('title');
             $table->text('description');
-            $table->string('repo_url');
-            $table->string('demo_url');
-            $table->string('production_url');
+            $table->string('repo_url')->nullable();
+            $table->string('demo_url')->nullable();
+            $table->string('production_url')->nullable();
             $table->date('deadline')->nullable();
             $table->double('total')->nullable();
             $table->float('duration')->nullable();

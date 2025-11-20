@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Software Project Management System</title>
+    <title>SPMS - Software Project Management System</title>
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/admin_template/img/ka-removebg-preview.png">
     <link href="/sbadmin2/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">

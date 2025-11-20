@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Feature extends Model
 {
     use HasFactory;
+
+    protected $guarded = [];
+
+    public function project(){
+        return $this->belongsTo(Project::class);
+    }
+
+    public function complexity(){
+        return $this->belongsTo(Complexity::class);
+    }
 }

@@ -36,17 +36,17 @@
 
                 <div class="col-md-4 mb-3">
                     <label>Repo URL</label>
-                    <input type="text" name="repo_url" class="form-control" required>
+                    <input type="text" name="repo_url" class="form-control">
                 </div>
 
                 <div class="col-md-4 mb-3">
                     <label>Demo URL</label>
-                    <input type="text" name="demo_url" class="form-control" required>
+                    <input type="text" name="demo_url" class="form-control">
                 </div>
 
                 <div class="col-md-4 mb-3">
                     <label>Production URL</label>
-                    <input type="text" name="production_url" class="form-control" required>
+                    <input type="text" name="production_url" class="form-control">
                 </div>
 
                 <div class="col-md-4 mb-3">
@@ -90,7 +90,7 @@
                     </select>
                 </div>
 
-                <div class="d-flex justify-content-end gap-2 mt-4">
+                <div class="col-md-4 mt-4">
                     <button type="submit" class="btn btn-success">
                         <i class="bi bi-save"></i> {{ ucwords(str_replace('_', ' ', 'save')) }}
                     </button>

@@ -25,6 +25,7 @@
                             <th>ID</th>
                             <th>Client</th>
                             <th>Title</th>
+                            <th>Description</th>
                             <th>Status</th>
                             <th>Progress</th>
                             <th>Action</th>
@@ -47,8 +48,9 @@
             order: [[0, 'asc']],
             columns: [
                 { data: 'id', name: 'id' },
-                { data: 'client', name: 'client' },
+                { data: 'client', name: 'client.fullname' },
                 { data: 'title', name: 'title' },
+                { data: 'description', name: 'description' },
                 { data: 'status', name: 'status' },
                 { data: 'progress', name: 'progress' },
                 { data: 'action', name: 'action', orderable: false, searchable: false }

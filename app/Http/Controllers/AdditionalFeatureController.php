@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\AdditionalFeature;
+use App\Models\AdditionalCost;
 use Illuminate\Http\Request;
 
-class AdditionalFeatureController extends Controller
+class AdditionalCostController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class AdditionalFeatureController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(AdditionalFeature $additionalFeature)
+    public function show(AdditionalCost $additionalCost)
     {
         //
     }
@@ -42,7 +42,7 @@ class AdditionalFeatureController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(AdditionalFeature $additionalFeature)
+    public function edit(AdditionalCost $additionalCost)
     {
         //
     }
@@ -50,7 +50,7 @@ class AdditionalFeatureController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, AdditionalFeature $additionalFeature)
+    public function update(Request $request, AdditionalCost $additionalCost)
     {
         //
     }
@@ -58,7 +58,7 @@ class AdditionalFeatureController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(AdditionalFeature $additionalFeature)
+    public function destroy(AdditionalCost $additionalCost)
     {
         //
     }

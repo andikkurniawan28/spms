@@ -14,4 +14,12 @@ class Project extends Model
     public function client(){
         return $this->belongsTo(Client::class);
     }
+
+    public function feature(){
+        return $this->hasMany(Feature::class);
+    }
+
+    public function additional_cost(){
+        return $this->hasMany(AdditionalCost::class);
+    }
 }

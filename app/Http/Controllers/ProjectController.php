@@ -21,7 +21,9 @@ class ProjectController extends Controller
 
             return DataTables::of($data)
                 ->addIndexColumn()
-                ->addColumn('client', fn($row) => $row->client->fullname ?? '-')
+                ->addColumn('client', function ($row) {
+                    return $row->client ? $row->client->fullname : '';
+                })
                 ->addColumn('status', fn($row) => ucfirst($row->status))
                 ->addColumn('action', function ($row) {
                     $buttons = '<div class="btn-group" role="group">';
@@ -71,9 +73,9 @@ class ProjectController extends Controller
             'client_id'     => 'required|exists:clients,id',
             'title'         => 'required|string|max:255',
             'description'   => 'required|string',
-            'repo_url'      => 'required|string|max:255',
-            'demo_url'      => 'required|string|max:255',
-            'production_url'=> 'required|string|max:255',
+            'repo_url'      => 'nullable|string|max:255',
+            'demo_url'      => 'nullable|string|max:255',
+            'production_url'=> 'nullable|string|max:255',
             'deadline'      => 'nullable|date',
             'total'         => 'nullable|numeric',
             'duration'      => 'nullable|numeric',
@@ -111,9 +113,9 @@ class ProjectController extends Controller
             'client_id'     => 'required|exists:clients,id',
             'title'         => 'required|string|max:255',
             'description'   => 'required|string',
-            'repo_url'      => 'required|string|max:255',
-            'demo_url'      => 'required|string|max:255',
-            'production_url'=> 'required|string|max:255',
+            'repo_url'      => 'nullable|string|max:255',
+            'demo_url'      => 'nullable|string|max:255',
+            'production_url'=> 'nullable|string|max:255',
             'deadline'      => 'nullable|date',
             'total'         => 'nullable|numeric',
             'duration'      => 'nullable|numeric',
